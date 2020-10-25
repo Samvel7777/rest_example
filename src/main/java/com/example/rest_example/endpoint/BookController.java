@@ -24,7 +24,7 @@ public class BookController {
     @GetMapping("/books/{id}")
     public Book getById(@PathVariable("id") int id) {
         return bookService.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Book dose nor exists"));
+                .orElseThrow(() -> new ResourceNotFoundException("Book dose not exists"));
     }
 
     @PostMapping("/books")
